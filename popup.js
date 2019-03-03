@@ -9,7 +9,9 @@ $( document ).ready(function() {
         $.post("http://13.68.211.239:8080/fakebox/check", req,
         function(result){
             $("#decision").text(result.title.decision);
-            //$("span").html(JSON.stringify(result));
+            $("#score").text(result.title.score);
+            $("#category").text(result.domain.category);
+            $("#domain").text(result.domain.domain);
         });
     });
 });
